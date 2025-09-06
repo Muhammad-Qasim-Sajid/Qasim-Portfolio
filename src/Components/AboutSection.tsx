@@ -19,26 +19,24 @@ function AboutSection() {
           <div className="flex-1">
             <div className="text-black md:text-sm sm:font-medium md:leading-relaxed sm:text-xs text-[10px] space-y-4">
               <p>
-                I am Qasim, a frontend developer who loves fully functional,
-                user-focused web applications. My journey in web development
-                began with a curiosity for how code shapes real-world
-                interactions, and over time, I have sharpened my skills by
-                building projects that connect frontend experiences with
-                powerful backend logic.
+                I am Qasim, a frontend developer who builds functional web
+                applications that users actually want to interact with. My
+                interest in web development started with figuring out how code
+                becomes something people can use, and I've spent time learning
+                to create applications that work well on both the frontend and
+                backend sides.
               </p>
               <p>
-                Through these projects, I have gained solid experience in
-                creating scalable, efficient applications, from writing clean
-                and maintainable code to integrating APIs and ensuring
-                everything runs smoothly across devices. I am passionate about
-                bridging the gap between frontend and backend, making sure what
-                I build not only works flawlessly but also feels seamless for
-                the user.
+                Through various projects, I've gotten comfortable writing
+                maintainable code, working with APIs, and making sure things
+                function properly across different devices. I focus on
+                connecting frontend experiences with backend logic, ensuring
+                that what I build works reliably and feels natural to use.
               </p>
               <p>
-                I believe every project is an opportunity to push myself
-                further, experiment with new approaches, and stay aligned with
-                modern best practices in web development.
+                I see each project as a chance to improve my skills, try
+                different approaches, and keep up with current web development
+                practices.
               </p>
             </div>
           </div>

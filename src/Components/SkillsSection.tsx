@@ -19,6 +19,7 @@ function SkillsSection() {
                 <div>HTML</div>
                 <div>CSS</div>
                 <div>JavaScript</div>
+                <div>TypeScript</div>
               </div>
             </div>
             <div className="text-center">
@@ -44,6 +45,7 @@ function SkillsSection() {
                 <div>Git</div>
                 <div>GitHub</div>
                 <div>Appwrite</div>
+                <div>Vercel & Netlify</div>
               </div>
             </div>
             <div className="text-center">
