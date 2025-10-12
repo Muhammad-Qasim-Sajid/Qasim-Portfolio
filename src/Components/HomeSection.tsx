@@ -11,7 +11,7 @@ const HomeSection = () => {
           Qa<span className="lg:ml-3 md:ml-2.5 sm:ml-2 ml-0.5">s</span>im,
         </p>
         <p className="text-[#f5deb3] text-[5vw] tracking-tight text-center leading-tighter font-medium">
-          Frontend Developer
+          Web Developer
         </p>
       </div>
     </div>

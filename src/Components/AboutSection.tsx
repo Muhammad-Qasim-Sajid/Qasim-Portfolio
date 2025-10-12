@@ -19,24 +19,25 @@ function AboutSection() {
           <div className="flex-1">
             <div className="text-black md:text-sm sm:font-medium md:leading-relaxed sm:text-xs text-[10px] space-y-4">
               <p>
-                I am Qasim, a frontend developer who builds functional web
-                applications that users actually want to interact with. My
-                interest in web development started with figuring out how code
-                becomes something people can use, and I've spent time learning
-                to create applications that work well on both the frontend and
-                backend sides.
+                I am Muhammad Qasim, a web developer who builds full-stack
+                applications. My journey started with curiosity about how code
+                transforms into something people interact with, and has evolved
+                into a focus on creating reliable, scalable solutions from
+                frontend to backend.
               </p>
               <p>
-                Through various projects, I've gotten comfortable writing
-                maintainable code, working with APIs, and making sure things
-                function properly across different devices. I focus on
-                connecting frontend experiences with backend logic, ensuring
-                that what I build works reliably and feels natural to use.
+                I have shipped multiple production-ready projects with 99%+
+                uptime, working across Next.js, React, TypeScript, Tailwind,
+                Prisma, and Appwrite. My approach emphasizes clean, maintainable
+                code, smooth API integration, and consistent performance across
+                all devices.
               </p>
               <p>
-                I see each project as a chance to improve my skills, try
-                different approaches, and keep up with current web development
-                practices.
+                Every project is an opportunity to sharpen my problem-solving,
+                experiment with emerging technologies, and align with modern
+                development standards. I am currently pursuing ICS while
+                contributing to open-source and deepening my backend expertise
+                with Node.js and Express.
               </p>
             </div>
           </div>

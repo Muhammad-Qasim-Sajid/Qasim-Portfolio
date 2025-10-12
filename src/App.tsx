@@ -9,6 +9,10 @@ import ErrorPage from "./Components/ErrorHandling/ErrorPage";
 import ErrorBoundary from "./Components/ErrorHandling/ErrorBoundary";
 import { SectionContext, useSectionContext } from "./SectionContext";
 
+const ChatterDetailPage = React.lazy(() => 
+  import("./Components/Project/Project Components/ChatterDetailPage")
+);
+
 const PortfolierDetailPage = React.lazy(() => 
   import("./Components/Project/Project Components/PortfolierDetailPage")
 );
@@ -213,7 +217,15 @@ const App: React.FC = () => {
     <ErrorBoundary>
       <SectionContext.Provider value={{ currentSection, setCurrentSection }}>
         <Routes>
-          <Route path="/" element={<MainPortfolio />} />        
+          <Route path="/" element={<MainPortfolio />} />
+          <Route 
+            path="/chatter-detailed-view" 
+            element={
+              <Suspense fallback={<LoadingSpinner />}>
+                <ChatterDetailPage />
+              </Suspense>
+            } 
+          />        
           <Route 
             path="/portfolier-detailed-view" 
             element={
