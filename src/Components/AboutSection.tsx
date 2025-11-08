@@ -19,25 +19,26 @@ function AboutSection() {
           <div className="flex-1">
             <div className="text-black md:text-sm sm:font-medium md:leading-relaxed sm:text-xs text-[10px] space-y-4">
               <p>
-                I am Muhammad Qasim, a web developer who builds full-stack
-                applications. My journey started with curiosity about how code
-                transforms into something people interact with, and has evolved
-                into a focus on creating reliable, scalable solutions from
-                frontend to backend.
+                I am Muhammad Qasim, a full-stack web developer specializing in
+                the MERN stack, enhanced by Next.js for modern, scalable
+                applications.. My journey began with curiosity about how code
+                turns into interactive experiences, and has grown into a
+                dedication to delivering reliable solutions across both frontend
+                and backend.
               </p>
               <p>
-                I have shipped multiple production-ready projects with 99%+
-                uptime, working across Next.js, React, TypeScript, Tailwind,
-                Prisma, and Appwrite. My approach emphasizes clean, maintainable
-                code, smooth API integration, and consistent performance across
-                all devices.
+                I have delivered multiple production-grade projects with 99%+
+                uptime, working with Node.js, Express.js, Next.js, React,
+                TypeScript and other modern technologies. I focus on writing
+                clean, maintainable code, seamless API integration, and ensuring
+                consistent performance across all devices.
               </p>
               <p>
-                Every project is an opportunity to sharpen my problem-solving,
-                experiment with emerging technologies, and align with modern
-                development standards. I am currently pursuing ICS while
-                contributing to open-source and deepening my backend expertise
-                with Node.js and Express.
+                Every project is a chance to enhance problem-solving skills,
+                explore emerging technologies, and adhere to modern development
+                standards. I am currently pursuing ICS while contributing to
+                open-source and expanding my full-stack expertise across the
+                modern web development ecosystem.
               </p>
             </div>
           </div>

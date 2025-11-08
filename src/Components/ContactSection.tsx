@@ -113,7 +113,7 @@ const ContactSection: React.FC = () => {
             </p>
             <div className="space-y-1.5">
               <div className="text-[#f5deb3] text-xs">
-                qasimch0404@gmail.com
+                qasimch0101@gmail.com
               </div>
               <div className="text-[#f5deb3] text-xs">+92 310 2755291</div>
             </div>
@@ -125,7 +125,7 @@ const ContactSection: React.FC = () => {
             </p>
             <div className="space-y-1.5 flex flex-col items-center justify-center">
               <a
-                href="https://drive.google.com/file/d/1mee5eO6EdPfifUCRzySsT_MopIkbGrF_/view?usp=sharing"
+                href="https://drive.google.com/file/d/1L9U_ECkJ07fIfk-zYz4M53lqaSLlqJ2x/view"
                 target="_blank"
                 rel="noreferrer"
                 className="text-[#f5deb3] text-xs w-30 hover:opacity-90 hover:tracking-wide transition-all"

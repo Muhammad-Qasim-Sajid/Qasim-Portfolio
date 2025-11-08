@@ -17,23 +17,23 @@ function SkillsSection() {
           </div>
 
           <div>
-            <p className="text-2xl font-bold mb-3">Frameworks</p>
+            <p className="text-2xl font-bold mb-3">Frontend</p>
             <p className="sm:text-sm text-[11px] font-medium">
               Next.js • React.js • Tailwind CSS 
             </p>
           </div>
 
           <div>
-            <p className="text-2xl font-bold mb-3">Libraries</p>
+            <p className="text-2xl font-bold mb-3">Backend</p>
             <p className="sm:text-sm text-[11px] font-medium">
-              Redux Toolkit • React Hook Form
+              Node.js • Express.js • Next.js • Appwrite • Clerk
             </p>
           </div>
 
           <div>
-            <p className="text-2xl font-bold mb-3">Backend & Database</p>
+            <p className="text-2xl font-bold mb-3">Database</p>
             <p className="sm:text-sm text-[11px] font-medium">
-              Next.js <span className="text-[10px]">(API Routes)</span> • Appwrite • Clerk • Prisma • SQLite
+              MongoDB • Mongoose • Prisma
             </p>
           </div>
 
