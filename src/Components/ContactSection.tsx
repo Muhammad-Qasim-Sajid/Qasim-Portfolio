@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback} from "react";
+import { motion } from "framer-motion";
+import { ChevronUp } from "lucide-react";
+import { CustomCursor, CursorTracker } from "./subComponents/CustomCursor";
 
 interface FormData {
   email: string;
@@ -10,6 +13,18 @@ interface Errors {
 }
 
 const ContactSection: React.FC = () => {
+
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const handleMouseMove = useCallback((e: MouseEvent) => {
+    setMousePosition({ x: e.clientX, y: e.clientY });
+  }, []);
+  useEffect(() => {
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, [handleMouseMove]);
+
   const [formData, setFormData] = useState<FormData>({
     email: "",
     message: "",
@@ -101,7 +116,19 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <div className="h-screen w-full bg-black flex flex-col relative font-['Fractul']">
+    <div className="h-screen w-full bg-black flex flex-col relative font-['Fractul'] cursor-none">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, y: [0, 8, 0] }}
+        transition={{
+          opacity: { delay: 2, duration: 0.5 },
+          y: { repeat: Infinity, duration: 2, ease: "easeInOut" },
+        }}
+        className="absolute top-4 bottom-0 left-1/2 -translate-x-1/2 z-20"
+      >
+        <ChevronUp className={`w-6 h-6 text-[#f5deb3]`} />
+      </motion.div>
+
       <div className="absolute top-8 left-8 text-[#f5deb3] text-base font-medium">
         Contact
       </div>
@@ -218,6 +245,22 @@ const ContactSection: React.FC = () => {
             : "Failed to send message!"}
         </div>
       )}
+
+      <div
+        className="absolute inset-0 opacity-10 pointer-events-none z-0"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, #f5deb3 1px, transparent 1px), linear-gradient(to bottom, #f5deb3 1px, transparent 1px)",
+          backgroundSize: "30px 30px",
+        }}
+      />
+      
+      <CustomCursor
+        mousePosition={mousePosition}
+        color="bg-[#f5deb3]"
+        borderColor="border-[#f5deb3]"
+      />
+      <CursorTracker mouseX={mousePosition.x} mouseY={mousePosition.y} />
     </div>
   );
 };

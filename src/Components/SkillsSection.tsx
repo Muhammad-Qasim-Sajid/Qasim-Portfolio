@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState, useEffect, useCallback} from "react";
+import { CustomCursor, CursorTracker } from "./subComponents/CustomCursor";
+import BottomPointer from "./subComponents/BottomPointer";
 
 function SkillsSection() {
+
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const handleMouseMove = useCallback((e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    }, []);
+    useEffect(() => {
+      window.addEventListener('mousemove', handleMouseMove);
+      return () => {
+        window.removeEventListener('mousemove', handleMouseMove);
+      };
+    }, [handleMouseMove]);
+
   return (
-    <div className="h-screen w-full bg-black flex flex-col relative font-['Fractul']">
+    <div className="h-screen w-full bg-black flex flex-col relative font-['Fractul'] cursor-none">
       <div className="absolute top-8 left-8 text-[#f5deb3] text-base font-medium">
         Skills
       </div>
@@ -45,6 +59,24 @@ function SkillsSection() {
           </div>
         </div>
       </div>
+
+      <div
+        className="absolute inset-0 opacity-10 pointer-events-none z-0"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, #f5deb3 1px, transparent 1px), linear-gradient(to bottom, #f5deb3 1px, transparent 1px)",
+          backgroundSize: "30px 30px",
+        }}
+      />
+
+      <CustomCursor
+        mousePosition={mousePosition}
+        color="bg-[#f5deb3]"
+        borderColor="border-[#f5deb3]"
+      />
+      <CursorTracker mouseX={mousePosition.x} mouseY={mousePosition.y} />
+
+      <BottomPointer />
     </div>
   );
 }
