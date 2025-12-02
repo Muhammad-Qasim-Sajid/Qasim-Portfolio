@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback} from "react";
 import { motion } from "framer-motion";
 import { ChevronUp } from "lucide-react";
-import { CustomCursor, CursorTracker } from "./subComponents/CustomCursor";
+import { CursorTracker } from "./subComponents/CursorTracker";
 
 interface FormData {
   email: string;
@@ -116,23 +116,42 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <div className="h-screen w-full bg-black flex flex-col relative font-['Fractul'] cursor-none">
+    <div className="h-screen w-full bg-black flex flex-col relative font-['Fractul']">
+
+      <CursorTracker mouseX={mousePosition.x} mouseY={mousePosition.y} />
+
+      <div 
+        className="absolute inset-0 opacity-10 pointer-events-none z-[1]"
+        style={{
+          backgroundImage: "linear-gradient(to right, #f5deb3 1px, transparent 1px), linear-gradient(to bottom, #f5deb3 1px, transparent 1px)",
+          backgroundSize: "30px 30px",
+        }}
+      />
+
+      {/* Animated Chevron - z-20 */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, y: [0, 8, 0] }}
+        animate={{ 
+          opacity: 1, 
+          y: [0, 8, 0] 
+        }}
         transition={{
           opacity: { delay: 2, duration: 0.5 },
-          y: { repeat: Infinity, duration: 2, ease: "easeInOut" },
+          y: { 
+            repeat: Infinity, 
+            duration: 2, 
+            ease: "easeInOut" 
+          },
         }}
-        className="absolute top-4 bottom-0 left-1/2 -translate-x-1/2 z-20"
+        className="absolute top-4 bottom-0 left-1/2 -translate-x-1/2 z-20 pointer-events-none"
       >
-        <ChevronUp className={`w-6 h-6 text-[#f5deb3]`} />
+        <ChevronUp className="w-6 h-6 text-[#f5deb3]" />
       </motion.div>
 
-      <div className="absolute top-8 left-8 text-[#f5deb3] text-base font-medium">
+      <div className="absolute top-8 left-8 text-[#f5deb3] text-base font-medium z-20">
         Contact
       </div>
-      <div className="flex-1 flex items-center justify-center px-8 sm:mt-1">
+      <div className="flex-1 flex items-center justify-center px-8 sm:mt-1 z-10">
         <div className="space-y-10 text-center">
           <div>
             <p className="text-[#f5deb3] text-2xl font-bold mb-3">
@@ -155,7 +174,7 @@ const ContactSection: React.FC = () => {
                 href="https://drive.google.com/file/d/1L9U_ECkJ07fIfk-zYz4M53lqaSLlqJ2x/view"
                 target="_blank"
                 rel="noreferrer"
-                className="text-[#f5deb3] text-xs w-30 hover:opacity-90 hover:tracking-wide transition-all"
+                className="text-[#f5deb3] cursor-pointer text-xs w-30 hover:opacity-90 hover:tracking-wide transition-all"
               >
                 Resume / CV
               </a>
@@ -163,7 +182,7 @@ const ContactSection: React.FC = () => {
                 href="https://github.com/Muhammad-Qasim-Sajid"
                 target="_blank"
                 rel="noreferrer"
-                className="text-[#f5deb3] text-xs w-30 hover:opacity-90 hover:tracking-wide transition-all"
+                className="text-[#f5deb3] cursor-pointer text-xs w-30 hover:opacity-90 hover:tracking-wide transition-all"
               >
                 GitHub
               </a>
@@ -222,7 +241,7 @@ const ContactSection: React.FC = () => {
             </div>
           </div>
         </div>
-        <p className="absolute bottom-2 text-[#f5deb3] sm:text-[10px] text-[9px] font-medium font-['Fractul']">
+        <p className="absolute bottom-2 text-[#f5deb3] sm:text-[10px] text-[9px] font-medium font-['Fractul'] z-20">
           © {new Date().getFullYear()} Qasim. All rights reserved.
         </p>
       </div>
@@ -230,7 +249,7 @@ const ContactSection: React.FC = () => {
       {/* Popup */}
       {showPopup && (
         <div
-          className={`fixed bottom-12 left-4 px-4 pl-3.5 py-2 pt-2.5 text-sm transition-transform duration-300 ${
+          className={`fixed bottom-12 left-4 px-4 pl-3.5 py-2 pt-2.5 text-sm z-50 transition-transform duration-300 ${
             popupType === "success"
               ? "bg-[#f5deb3] text-black"
               : "bg-[#f5deb3] text-red-600"
@@ -245,22 +264,6 @@ const ContactSection: React.FC = () => {
             : "Failed to send message!"}
         </div>
       )}
-
-      <div
-        className="absolute inset-0 opacity-10 pointer-events-none z-0"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, #f5deb3 1px, transparent 1px), linear-gradient(to bottom, #f5deb3 1px, transparent 1px)",
-          backgroundSize: "30px 30px",
-        }}
-      />
-      
-      <CustomCursor
-        mousePosition={mousePosition}
-        color="bg-[#f5deb3]"
-        borderColor="border-[#f5deb3]"
-      />
-      <CursorTracker mouseX={mousePosition.x} mouseY={mousePosition.y} />
     </div>
   );
 };

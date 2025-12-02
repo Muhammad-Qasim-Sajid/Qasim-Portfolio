@@ -1,0 +1,16 @@
+{
+  "name": "Muhammad Qasim - Full-Stack Developer",
+  "short_name": "Qasim",
+  "description": "Portfolio of Muhammad Qasim",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#f5deb3",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

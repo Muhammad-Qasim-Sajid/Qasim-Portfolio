@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { CustomCursor, CursorTracker } from "./subComponents/CustomCursor";
+import { CursorTracker } from "./subComponents/CursorTracker";
 import BottomPointer from "./subComponents/BottomPointer";
 import KineticWord from "./subComponents/KineticWord";
 
@@ -17,7 +17,7 @@ const HomeSection: React.FC = () => {
   }, [handleMouseMove]);
 
   return (
-    <div className="h-screen w-full bg-black flex items-center justify-center relative font-['Fractul'] cursor-none overflow-hidden">
+    <div className="h-screen w-full bg-black flex items-center justify-center relative font-['Fractul'] overflow-hidden">
       <div className="absolute top-8 left-8 text-[#f5deb3] text-base font-medium tracking-tight">
         Home
       </div>
@@ -41,11 +41,6 @@ const HomeSection: React.FC = () => {
         }}
       />
 
-      <CustomCursor
-        mousePosition={mousePosition}
-        color="bg-[#f5deb3]"
-        borderColor="border-[#f5deb3]"
-      />
       <CursorTracker mouseX={mousePosition.x} mouseY={mousePosition.y} />
 
       <BottomPointer />

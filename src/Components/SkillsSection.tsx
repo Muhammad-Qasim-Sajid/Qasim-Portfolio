@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback} from "react";
-import { CustomCursor, CursorTracker } from "./subComponents/CustomCursor";
+import { CursorTracker } from "./subComponents/CursorTracker";
 import BottomPointer from "./subComponents/BottomPointer";
 
 function SkillsSection() {
@@ -16,7 +16,7 @@ function SkillsSection() {
     }, [handleMouseMove]);
 
   return (
-    <div className="h-screen w-full bg-black flex flex-col relative font-['Fractul'] cursor-none">
+    <div className="h-screen w-full bg-black flex flex-col relative font-['Fractul']">
       <div className="absolute top-8 left-8 text-[#f5deb3] text-base font-medium">
         Skills
       </div>
@@ -69,11 +69,6 @@ function SkillsSection() {
         }}
       />
 
-      <CustomCursor
-        mousePosition={mousePosition}
-        color="bg-[#f5deb3]"
-        borderColor="border-[#f5deb3]"
-      />
       <CursorTracker mouseX={mousePosition.x} mouseY={mousePosition.y} />
 
       <BottomPointer />

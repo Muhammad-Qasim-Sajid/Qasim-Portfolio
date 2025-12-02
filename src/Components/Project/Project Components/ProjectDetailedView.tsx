@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useCallback} from "react";
-import { CustomCursor } from "../../subComponents/CustomCursor";
+import React from "react";
 
 interface Challenge {
     title: string;
@@ -22,20 +21,8 @@ interface ProjectDetailedViewProps {
 }
 
 const ProjectDetailedView: React.FC<ProjectDetailedViewProps> = ({ project }) => {
-
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-    const handleMouseMove = useCallback((e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    }, []);
-    useEffect(() => {
-      window.addEventListener("mousemove", handleMouseMove);
-      return () => {
-        window.removeEventListener("mousemove", handleMouseMove);
-      };
-    }, [handleMouseMove]);
-
     return (
-      <div className="min-h-screen w-full bg-[#f5deb3] text-black font-['Fractul'] cursor-none">
+      <div className="min-h-screen w-full bg-[#f5deb3] text-black font-['Fractul']">
         <div className="sm:px-30 px-7 py-15 sm:pb-23 pb-21 space-y-10">
           {/* Header */}
           <div>
@@ -135,12 +122,6 @@ const ProjectDetailedView: React.FC<ProjectDetailedViewProps> = ({ project }) =>
         <p className="text-center md:pb-3 pb-2 text-black md:text-xs text-[10px] font-medium">
           © {new Date().getFullYear()} Qasim. All rights reserved.
         </p>
-
-        <CustomCursor
-          mousePosition={mousePosition}
-          color="bg-[#000000]"
-          borderColor="border-[#000000]"
-        />
       </div>
     );
 };
