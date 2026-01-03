@@ -171,7 +171,7 @@ const ContactSection: React.FC = () => {
             </p>
             <div className="space-y-1.5 flex flex-col items-center justify-center">
               <a
-                href="https://drive.google.com/file/d/1L9U_ECkJ07fIfk-zYz4M53lqaSLlqJ2x/view"
+                href="https://drive.google.com/file/d/1EYMZPpVSh6yuVhElWyfImSKTaidfe2mf/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 className="text-[#f5deb3] cursor-pointer text-xs w-30 hover:opacity-90 hover:tracking-wide transition-all"

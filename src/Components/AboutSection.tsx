@@ -20,26 +20,30 @@ function AboutSection() {
           <div className="flex-1">
             <div className="text-black md:text-sm sm:font-medium md:leading-relaxed sm:text-xs text-[10px] space-y-4">
               <p>
-                I am Muhammad Qasim, a full-stack web developer specializing in
-                the MERN stack, enhanced by Next.js for modern, scalable
-                applications.. My journey began with curiosity about how code
-                turns into interactive experiences, and has grown into a
-                dedication to delivering reliable solutions across both frontend
-                and backend.
-              </p>
+                {" "}
+                I am Muhammad Qasim, a full-stack developer specializing in
+                the MERN stack and Next.js, with additional expertise in
+                integrating AI features into modern, scalable applications. My
+                journey began with curiosity about how code turns into
+                interactive experiences, and has grown into a dedication to
+                delivering reliable solutions across both frontend and backend.{" "}
+              </p>{" "}
               <p>
+                {" "}
                 I have delivered multiple production-grade projects with 99%+
                 uptime, working with Node.js, Express.js, Next.js, React,
-                TypeScript and other modern technologies. I focus on writing
-                clean, maintainable code, seamless API integration, and ensuring
-                consistent performance across all devices.
-              </p>
+                TypeScript and AI technologies like OpenAI APIs. I focus on
+                writing clean, maintainable code, seamless API integration, and
+                ensuring consistent performance across all devices while
+                implementing intelligent workflows.{" "}
+              </p>{" "}
               <p>
+                {" "}
                 Every project is a chance to enhance problem-solving skills,
-                explore emerging technologies, and adhere to modern development
-                standards. I am currently pursuing ICS while contributing to
-                open-source and expanding my full-stack expertise across the
-                modern web development ecosystem.
+                explore emerging technologies including AI, and adhere to modern
+                development standards. I am currently pursuing ICS while
+                contributing to open-source and expanding my full-stack
+                expertise across the modern web development ecosystem.{" "}
               </p>
             </div>
           </div>

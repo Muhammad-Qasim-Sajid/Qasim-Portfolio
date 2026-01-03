@@ -12,6 +12,11 @@ const ProjectsSection: React.FC = () => {
       <div className="flex-1 flex items-center justify-center px-5">
         <div className="flex flex-wrap justify-center gap-4 max-w-7xl">
           <ProjectCard
+            title="E-Commerce Store"
+            image="/ecommerce.jpg"
+            detailsRoute="/ecommerce-detailed-view"
+          />
+          <ProjectCard
             title="Chatter"
             image="/chatter.png"
             detailsRoute="/chatter-detailed-view"
@@ -20,11 +25,6 @@ const ProjectsSection: React.FC = () => {
             title="Portfolier"
             image="/portfolier.png"
             detailsRoute="/portfolier-detailed-view"
-          />
-          <ProjectCard
-            title="Cashflower"
-            image="/cashflower.png"
-            detailsRoute="/cashflower-detailed-view"
           />
         </div>
       </div>

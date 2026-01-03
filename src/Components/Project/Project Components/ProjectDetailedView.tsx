@@ -12,8 +12,9 @@ interface Project {
     techStack: string[];
     challenges?: Challenge[];
     learnings?: string[];
-    codeLink: string;
-    liveDemo: string;
+    codeLink?: string;
+    liveDemo?: string;
+    linksLine?: boolean;
 }
 
 interface ProjectDetailedViewProps {
@@ -97,7 +98,7 @@ const ProjectDetailedView: React.FC<ProjectDetailedViewProps> = ({ project }) =>
           )}
 
           {/* Links */}
-          <section>
+          {(project.codeLink && project.liveDemo) && <section>
             <p className="mb-3 font-bold text-lg">Project Links</p>
             <div className="flex sm:gap-4 gap-2 mx-3">
               <a
@@ -117,7 +118,10 @@ const ProjectDetailedView: React.FC<ProjectDetailedViewProps> = ({ project }) =>
                 Live Demo →
               </a>
             </div>
-          </section>
+          </section>}
+          {project.linksLine && <section>
+            <p className="italic -mb-5"> - Live links unavailable due to client’s confidentiality agreement</p>
+          </section>}
         </div>
         <p className="text-center md:pb-3 pb-2 text-black md:text-xs text-[10px] font-medium">
           © {new Date().getFullYear()} Qasim. All rights reserved.

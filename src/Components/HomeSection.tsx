@@ -26,7 +26,7 @@ const HomeSection: React.FC = () => {
           Qa<span className="lg:ml-3 md:ml-2.5 sm:ml-2 ml-0.5">s</span>im,
         </p>
         <KineticWord 
-          text="Full-Stack Web Developer"
+          text="Full-Stack Developer"
           className="text-[#f5deb3] text-[5vw] tracking-tight text-center leading-tighter font-medium"
           delayOffset={0.1}
         />

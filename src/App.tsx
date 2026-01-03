@@ -9,15 +9,16 @@ import ErrorPage from "./Components/ErrorHandling/ErrorPage";
 import ErrorBoundary from "./Components/ErrorHandling/ErrorBoundary";
 import { SectionContext, useSectionContext } from "./SectionContext";
 
+const EcommerceDetailPage = React.lazy(() => 
+  import("./Components/Project/Project Components/ecommerceDetailPage")
+);
+
 const ChatterDetailPage = React.lazy(() => 
   import("./Components/Project/Project Components/ChatterDetailPage")
 );
 
 const PortfolierDetailPage = React.lazy(() => 
   import("./Components/Project/Project Components/PortfolierDetailPage")
-);
-const CashflowerDetailPage = React.lazy(() => 
-  import("./Components/Project/Project Components/CashflowerDetailPage")
 );
 
 const LoadingSpinner: React.FC = () => {
@@ -219,6 +220,14 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<MainPortfolio />} />
           <Route 
+            path="/ecommerce-detailed-view" 
+            element={
+              <Suspense fallback={<LoadingSpinner />}>
+                <EcommerceDetailPage />
+              </Suspense>
+            } 
+          />
+          <Route 
             path="/chatter-detailed-view" 
             element={
               <Suspense fallback={<LoadingSpinner />}>
@@ -231,14 +240,6 @@ const App: React.FC = () => {
             element={
               <Suspense fallback={<LoadingSpinner />}>
                 <PortfolierDetailPage />
-              </Suspense>
-            } 
-          />
-          <Route 
-            path="/cashflower-detailed-view" 
-            element={
-              <Suspense fallback={<LoadingSpinner />}>
-                <CashflowerDetailPage />
               </Suspense>
             } 
           />      
