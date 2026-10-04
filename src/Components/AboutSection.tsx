@@ -41,7 +41,7 @@ function AboutSection() {
                 {" "}
                 Every project is a chance to enhance problem-solving skills,
                 explore emerging technologies including AI, and adhere to modern
-                development standards. I am currently pursuing ICS while
+                development standards. I am currently pursuing Software Engineering while
                 contributing to open-source and expanding my full-stack
                 expertise across the modern web development ecosystem.{" "}
               </p>
